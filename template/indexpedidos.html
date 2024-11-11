@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="content-type" content="text/html; charset=utf-8"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Pedidos</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="./bootstrap-5.3.3-dist/css/bootstrap.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header class="bg-dark-gradient">
+      <h1>APLICATIVO RESTAURANTE</h1>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Mi Logo</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Crud de cargos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./indexclientes.html"
+                  >Crud de clientes</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./indexpedidos.html"
+                  >Crud de pedidos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./indexproductos.html"
+                  >Crud de productos</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#about">Sobre mí</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#technologies">Tecnologías</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Portafolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#testimonials">Testimonios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="form-section">
+        <h2>Registro de Pedidos</h2>
+        <form id="pedidosForm">
+          <label for="id">Id:</label>
+          <input type="number" id="id" name="id" required />
+
+          <label for="nombre_cliente">Nombre_cliente:</label>
+          <input
+            type="text"
+            id="nombre_cliente"
+            name="nombre_cliente"
+            required
+          />
+
+          <label for="numero_mesa">Numero_mesa:</label>
+          <input type="number" id="numero_mesa" name="numero_mesa" required />
+
+          <label for="nombre_mesero">Nombre_mesero:</label>
+          <input type="text" id="nombre_mesero" name="nombre_mesero" required />
+          <button type="submit" class="submitbtn" id="submitBtn">
+            Guardar
+          </button>
+
+          <!-- <button type="button" id="updateBtn">Actualizar</button> -->
+        </form>
+      </section>
+
+      <section id="table-section">
+        <h2>Listado de Pedidos</h2>
+        <table id="pedidosTable">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Nombre_cliente</th>
+              <th>Numero_mesa</th>
+              <th>Nombre_mesero</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+    <script src="./scriptpedidos.js"></script>
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
